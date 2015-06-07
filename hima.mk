@@ -102,7 +102,8 @@ PRODUCT_PACKAGES += \
 
 # Dot View Case
 PRODUCT_PACKAGES += \
-    Dotcase
+    Dotcase \
+    DeviceHandler
 
 # GPS
 PRODUCT_COPY_FILES += \

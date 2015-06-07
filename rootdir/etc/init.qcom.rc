@@ -284,6 +284,9 @@ on boot
     chown system system /sys/devices/virtual/htc_sensorhub/sensor_hub/ps_canc
     chown system system /sys/devices/virtual/htc_sensorhub/sensor_hub/sensor_hub_rdata
 
+    # gesture sensors, all teh f's
+    write /sys/class/htc_sensorhub/sensor_hub/gesture_motion 807C
+
     chmod 664 /sys/devices/virtual/htc_sensorhub/sensor_hub/ap_calibrator_data_acc_rl
     chmod 664 /sys/devices/virtual/htc_sensorhub/sensor_hub/batch_enable
     chmod 664 /sys/devices/virtual/htc_sensorhub/sensor_hub/calibrator_data_acc
