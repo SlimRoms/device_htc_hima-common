@@ -28,3 +28,15 @@ extern "C" void _ZN7android13GraphicBufferC1Ejjij(
   _ZN7android13GraphicBufferC1EjjijNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE(
       inWidth, inHeight, inFormat, inUsage, requestorName);
 }
+
+//android::SurfaceComposerClient::setDisplaySurface(android::sp<android::IBinder> const&,
+// android::sp<android::IGraphicBufferProducer> const&);
+
+extern "C" void _ZN7android21SurfaceComposerClient17setDisplaySurfaceERKNS_2spINS_7IBinderEEENS1_INS_22IGraphicBufferProducerEEE(
+    uint32_t token, uint32_t bufferProducer);
+
+extern "C" void _ZN7android21SurfaceComposerClient17setDisplaySurfaceERKNS_2spINS_7IBinderEEERKNS1_INS_22IGraphicBufferProducerEEE(
+    uint32_t token, uint32_t bufferProducer) {
+  _ZN7android21SurfaceComposerClient17setDisplaySurfaceERKNS_2spINS_7IBinderEEENS1_INS_22IGraphicBufferProducerEEE(
+      token, bufferProducer);
+}
