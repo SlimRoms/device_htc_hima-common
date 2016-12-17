@@ -77,4 +77,28 @@ $(CPE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(CPE_SYMLINKS)
 
+KEYMASTER_IMAGES := \
+    keymaster.b00 keymaster.b01 keymaster.b02 keymaster.b03 keymaster.mdt
+
+KEYMASTER_SYMLINKS := $(addprefix $(TARGET_ROOT_OUT)/firmware/image/,$(notdir $(KEYMASTER_IMAGES)))
+$(KEYMASTER_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "KEYMASTER firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /vendor/firmware/keymaster/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(KEYMASTER_SYMLINKS)
+
+QSEECOM_IMAGES := \
+    mc_v2.b00 mc_v2.b01 mc_v2.b02 mc_v2.b03 mc_v2.mdt
+
+QSEECOM_SYMLINKS := $(addprefix $(TARGET_ROOT_OUT)/firmware/image/,$(notdir $(QSEECOM_IMAGES)))
+$(QSEECOM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "QSEECOM firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/etc/firmware/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(QSEECOM_SYMLINKS)
+
 endif
