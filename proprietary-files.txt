@@ -87,6 +87,7 @@ vendor/lib/soundfx/libswdap.so
 etc/firmware/BCM4356A2_001.003.015.0100.0102.hcd:etc/firmware/BCM4354A2_001.003.015.0100.0102.hcd
 
 # Camera
+bin/mm-qcamera-app
 bin/mm-qcamera-daemon
 lib/hw/camera.msm8994.so
 lib/libawb_calibration.so
@@ -819,8 +820,6 @@ bin/qmuxd
 bin/radish
 bin/rmt_storage
 lib64/libhtc_rilhook.so
--lib64/libril.so
--lib/libril.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
