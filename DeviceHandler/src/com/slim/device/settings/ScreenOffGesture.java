@@ -37,9 +37,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import org.slim.utils.AppHelper;
-import org.slim.action.ActionsArray;
-import org.slim.action.ActionConstants;
+import slim.utils.AppHelper;
+import slim.action.ActionsArray;
+import slim.action.ActionConstants;
 
 import com.slim.device.R;
 import com.slim.device.util.ShortcutPickerHelper;
@@ -48,7 +48,7 @@ public class ScreenOffGesture extends PreferenceFragment implements
         OnPreferenceChangeListener, OnPreferenceClickListener,
         ShortcutPickerHelper.OnPickListener {
 
-    private static final String SLIM_METADATA_NAME = "org.slim.framework";
+    private static final String SLIM_METADATA_NAME = "slim.framework";
 
     public static final String GESTURE_SETTINGS = "screen_off_gesture_settings";
 
