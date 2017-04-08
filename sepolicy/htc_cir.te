@@ -1,0 +1,4 @@
+allow system_app sysfs_cir : file { read write getattr open };
+allow system_app cir_device:chr_file { read write };
+allow system_app sysfs_cir:dir search;
+allow system_app cir_device:chr_file { ioctl read write open };
