@@ -129,8 +129,6 @@ on enable-low-power
     write /sys/module/msm_hotplug/io_is_busy 1
     write /sys/module/msm_hotplug/load_levels "3 160 100"
 
-    start perfd
-
 on property:sys.boot_completed=1
     trigger enable-low-power
 
